@@ -1,0 +1,10 @@
+/* The status bar floats over the editor, so fading it costs no layout. */
+body:not(.is-mobile, .oxg-show-status-bar) .status-bar {
+  opacity: 0;
+  transition: opacity var(--oxg-hide);
+
+  &:hover {
+    opacity: 1;
+    transition: opacity var(--oxg-reveal);
+  }
+}

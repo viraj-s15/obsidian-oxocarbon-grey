@@ -1,0 +1,19 @@
+/* --ribbon-width is not an animatable property, so the width snaps and only
+   the icons fade. */
+body:not(.is-mobile, .oxg-show-ribbon) .workspace-ribbon.side-dock-ribbon {
+  --ribbon-width: var(--oxg-hover-strip);
+
+  > * {
+    opacity: 0;
+    transition: opacity var(--oxg-hide);
+  }
+
+  &:hover {
+    --ribbon-width: 44px;
+  }
+
+  &:hover > * {
+    opacity: 1;
+    transition: opacity var(--oxg-reveal);
+  }
+}

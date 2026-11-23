@@ -1,0 +1,65 @@
+/* @settings
+
+name: Oxocarbon Grey
+id: oxocarbon-grey
+settings:
+    -
+        id: oxg-autohide-heading
+        title: Auto-hide
+        description: Each bar hides until the pointer reaches it. Turn a toggle on to keep that bar visible.
+        type: heading
+        level: 2
+        collapsed: false
+    -
+        id: oxg-show-tab-bar
+        title: Always show the tab bar
+        type: class-toggle
+    -
+        id: oxg-show-view-header
+        title: Always show the note title bar
+        type: class-toggle
+    -
+        id: oxg-show-nav-header
+        title: Always show the sidebar buttons
+        type: class-toggle
+    -
+        id: oxg-show-status-bar
+        title: Always show the status bar
+        type: class-toggle
+    -
+        id: oxg-show-ribbon
+        title: Always show the ribbon
+        type: class-toggle
+    -
+        id: oxg-explorer-heading
+        title: File explorer
+        type: heading
+        level: 2
+        collapsed: false
+    -
+        id: oxg-no-file-icons
+        title: Hide file and folder icons
+        type: class-toggle
+    -
+        id: oxg-plain-folders
+        title: Use one colour for folder icons
+        type: class-toggle
+    -
+        id: oxg-regular-folders
+        title: Use regular weight for folder names
+        type: class-toggle
+    -
+        id: oxg-editor-heading
+        title: Editor
+        type: heading
+        level: 2
+        collapsed: false
+    -
+        id: oxg-no-heading-bars
+        title: Hide the coloured bars before headings
+        type: class-toggle
+    -
+        id: oxg-no-title-divider
+        title: Hide the line under the note title
+        type: class-toggle
+*/

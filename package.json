@@ -1,0 +1,16 @@
+{
+  "name": "obsidian-oxocarbon-grey",
+  "private": true,
+  "type": "module",
+  "description": "Oxocarbon Grey theme for Obsidian.",
+  "license": "MIT",
+  "scripts": {
+    "build": "node src/build.mjs",
+    "check": "node src/build.mjs --check && node --test && stylelint theme.css"
+  },
+  "devDependencies": {
+    "oxocarbon-grey": "github:viraj-s15/oxocarbon-grey#c6c7e89ffdc9ff5fb99b926b735ec82441084c48",
+    "stylelint": "^17.0.0",
+    "stylelint-config-obsidianmd": "^0.1.0"
+  }
+}

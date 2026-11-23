@@ -1,0 +1,45 @@
+/* overflow is hidden so that invisible buttons cannot catch clicks meant
+   for the first rows of the file list. The direct-child scope leaves the
+   backlinks embedded under a note alone, as Border does. */
+body:not(.is-mobile, .oxg-show-nav-header) {
+  :is(.workspace-leaf-content, .view-content) > .nav-header .nav-buttons-container {
+    height: 8px;
+    overflow: hidden;
+    opacity: 0;
+    transition:
+      height var(--oxg-hide),
+      opacity var(--oxg-hide);
+  }
+
+  :is(.workspace-leaf-content, .view-content) > .nav-header .search-input-container {
+    height: 0;
+    margin: 0 auto;
+    overflow: hidden;
+    opacity: 0;
+    transition:
+      height var(--oxg-hide),
+      margin var(--oxg-hide),
+      opacity var(--oxg-hide);
+  }
+
+  :is(.workspace-leaf-content, .view-content) > .nav-header:hover .nav-buttons-container,
+  .workspace-tab-header-container:hover ~ .workspace-tab-container :is(.workspace-leaf-content, .view-content) > .nav-header .nav-buttons-container {
+    height: 32px;
+    opacity: 1;
+    transition:
+      height var(--oxg-reveal),
+      opacity var(--oxg-reveal);
+  }
+
+  :is(.workspace-leaf-content, .view-content) > .nav-header:hover .search-input-container,
+  :is(.workspace-leaf-content, .view-content) > .nav-header:focus-within .search-input-container,
+  .workspace-tab-header-container:hover ~ .workspace-tab-container :is(.workspace-leaf-content, .view-content) > .nav-header .search-input-container {
+    height: 30px;
+    margin: 6px auto 4px;
+    opacity: 1;
+    transition:
+      height var(--oxg-reveal),
+      margin var(--oxg-reveal),
+      opacity var(--oxg-reveal);
+  }
+}

@@ -1,0 +1,53 @@
+body:not(.oxg-regular-folders) .nav-folder-title {
+  --nav-item-weight: var(--font-bold);
+  --nav-item-weight-hover: var(--font-bold);
+  --nav-item-weight-active: var(--font-bold);
+}
+
+/* Folders reuse the collapse chevron's box: the chevron is made transparent
+   so the box keeps its size, and a folder shape is masked onto it. */
+body:not(.oxg-no-file-icons) .workspace-leaf-content[data-type="file-explorer"] {
+  .nav-folder-title .collapse-icon {
+    background-color: var(--oxg-folder-colour, currentcolor);
+    opacity: var(--icon-opacity);
+    mask: var(--oxg-icon-folder-open) center / var(--icon-s) no-repeat;
+  }
+
+  .nav-folder.is-collapsed > .nav-folder-title .collapse-icon {
+    mask-image: var(--oxg-icon-folder);
+  }
+
+  .nav-folder-title .collapse-icon svg {
+    color: transparent;
+  }
+
+  .nav-file-title::before {
+    position: absolute;
+    width: var(--size-4-4);
+    height: var(--size-4-4);
+    margin-left: calc(-1 * var(--size-4-5));
+    background-color: currentcolor;
+    opacity: var(--icon-opacity);
+    content: "";
+    mask: var(--oxg-icon-file) center / var(--icon-s) no-repeat;
+  }
+
+  .nav-file-title[data-path$=".pdf"]::before {
+    mask-image: var(--oxg-icon-file-text);
+  }
+
+  .nav-file-title[data-path$=".canvas"]::before {
+    mask-image: var(--oxg-icon-canvas);
+  }
+
+  .nav-file-title:is(
+      [data-path$=".png"],
+      [data-path$=".jpg"],
+      [data-path$=".jpeg"],
+      [data-path$=".gif"],
+      [data-path$=".svg"],
+      [data-path$=".webp"]
+    )::before {
+    mask-image: var(--oxg-icon-image);
+  }
+}

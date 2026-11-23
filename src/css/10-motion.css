@@ -1,0 +1,16 @@
+/* Border waits 75 ms before it shows a bar and 600 ms before it hides one.
+   Bars here appear at once and hide after a short delay, which keeps them
+   from flickering when the pointer only passes over them. */
+body {
+  --oxg-ease: cubic-bezier(0.2, 0, 0, 1);
+  --oxg-reveal: 100ms var(--oxg-ease);
+  --oxg-hide: 150ms var(--oxg-ease) 200ms;
+  --oxg-hover-strip: 16px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    --oxg-reveal: 0ms;
+    --oxg-hide: 0ms;
+  }
+}

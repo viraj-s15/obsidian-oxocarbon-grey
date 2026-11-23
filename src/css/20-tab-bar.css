@@ -1,0 +1,18 @@
+/* The collapsed bar keeps a thin strip so the pointer has something to reach. */
+body:not(.is-mobile, .oxg-show-tab-bar) {
+  .workspace-tab-header-container {
+    height: var(--oxg-hover-strip);
+    opacity: 0;
+    transition:
+      height var(--oxg-hide),
+      opacity var(--oxg-hide);
+  }
+
+  .workspace-tab-header-container:hover {
+    height: var(--header-height);
+    opacity: 1;
+    transition:
+      height var(--oxg-reveal),
+      opacity var(--oxg-reveal);
+  }
+}

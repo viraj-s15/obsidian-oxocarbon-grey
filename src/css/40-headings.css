@@ -1,0 +1,74 @@
+h1,
+.HyperMD-header-1 {
+  --oxg-heading-bar: var(--oxg-h1-bar);
+}
+
+h2,
+.HyperMD-header-2 {
+  --oxg-heading-bar: var(--oxg-h2-bar);
+}
+
+h3,
+.HyperMD-header-3 {
+  --oxg-heading-bar: var(--oxg-h3-bar);
+}
+
+h4,
+.HyperMD-header-4 {
+  --oxg-heading-bar: var(--oxg-h4-bar);
+}
+
+h5,
+.HyperMD-header-5 {
+  --oxg-heading-bar: var(--oxg-h5-bar);
+}
+
+h6,
+.HyperMD-header-6 {
+  --oxg-heading-bar: var(--oxg-h6-bar);
+}
+
+body:not(.oxg-no-heading-bars) {
+  .markdown-rendered > :is(h1, h2, h3, h4, h5, h6),
+  .markdown-preview-sizer > div > :is(h1, h2, h3, h4, h5, h6) {
+    position: relative;
+    text-indent: 9px;
+  }
+
+  .markdown-rendered > :is(h1, h2, h3, h4, h5, h6)::before,
+  .markdown-preview-sizer > div > :is(h1, h2, h3, h4, h5, h6)::before {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 3px;
+    height: calc(1.2em - 8px);
+    border-radius: var(--radius-m);
+    background-color: var(--oxg-heading-bar);
+    content: "";
+  }
+
+  .is-live-preview .HyperMD-header::before {
+    display: inline-block;
+    width: 3px;
+    height: calc(1.2em - 8px);
+    margin-right: 6px;
+    border-radius: var(--radius-m);
+    background-color: var(--oxg-heading-bar);
+    content: "";
+    transform: translateY(4px);
+  }
+
+  .markdown-preview-view .heading-collapse-indicator {
+    transform: translateX(-16px);
+  }
+
+  .is-live-preview .HyperMD-header .collapse-indicator {
+    transform: translateX(-8px);
+  }
+}
+
+body:not(.is-phone, .oxg-no-title-divider) .inline-title {
+  padding-bottom: var(--size-4-3);
+  margin-bottom: var(--size-4-3);
+  border-bottom: 1px solid var(--divider-color);
+}
