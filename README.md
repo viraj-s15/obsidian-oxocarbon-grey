@@ -2,7 +2,7 @@
 
 A dark Obsidian theme that uses the [Oxocarbon Grey](https://github.com/viraj-s15/oxocarbon-grey) palette, the same one as the VS Code, Zed, Neovim and Ghostty ports. Its layout follows the parts of the [Border](https://github.com/Akifyss/obsidian-border) theme that keep the workspace quiet, with faster motion.
 
-![Oxocarbon Grey in Obsidian](images/screenshot.png)
+![Oxocarbon Grey in Obsidian](images/preview.png)
 
 ## What it changes
 
@@ -47,4 +47,4 @@ The first release also needs a submission at [community.obsidian.md](https://com
 
 ## Licence
 
-MIT. The third-party notices for Border and Lucide are in `LICENSE`.
+MIT. The notices for Border (MIT) and the Lucide icons (ISC) are in `NOTICE`.
