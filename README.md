@@ -47,4 +47,4 @@ The first release also needs a submission at [community.obsidian.md](https://com
 
 ## Licence
 
-MIT. The notices for Border (MIT) and the Lucide icons (ISC) are in `NOTICE`.
+MIT. The notices for the oxocarbon.nvim palette (MIT), Border (MIT) and the Lucide icons (ISC) are in `NOTICE`.
